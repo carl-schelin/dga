@@ -1,0 +1,349 @@
+/* Validated css codes */
+
+body {
+  font: 62.5% "Lucida Grande", Arial, sans-serif;
+  background-color: #539db1;
+  font-size: 12px;
+  color: #000000;
+  text-align: center;
+}
+
+/*  width: 910px; */
+
+#main, #header, #footer {
+  margin: 0 auto;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+/*  width: 900px; */
+
+#main {
+  padding: 15px;
+  border: 1px solid #cbcbcb;
+  background:#fff;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: 3px 3px 3px #000;
+  -moz-box-shadow: 3px 3px 3px #000;
+  -webkit-box-shadow: 3px 3px 3px #000;
+}
+
+/* dga specific classes */
+.events {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+p.events {
+  text-indent: 30px;
+  text-align: left;
+}
+.evtcat {
+  margin-left: 50px;
+  text-align: left;
+}
+
+.guests {
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
+
+h1.guests {
+  font: 62.5% "Lucida Grande", Arial, sans-serif;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color:#fff;
+  background-color: #000;
+}
+h2.guests {
+  font: 62.5% "Lucida Grande", Arial, sans-serif;
+  text-align: left;
+  text-indent: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  color:#222;
+}
+img.guests {
+  float: left;
+}
+p.guests {
+  text-indent: 30px;
+  text-align: left;
+  font-size: 12px;
+}
+
+li.rules {
+  text-align: left;
+  font-size: 12px;
+}
+p.rules {
+  text-align: left;
+  font-size: 12px;
+}
+
+p.fees {
+  text-align: left;
+  font-size: 12px;
+}
+
+
+/* for the view all page */
+
+
+table { 
+  width: 90%;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  border-collapse: collapse;
+}
+
+tr {
+  background-color: #ffffcc;
+}
+
+th {
+  font: 62.5% Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #000000;
+  font-size: 12px;
+  vertical-align: baseline;
+  background-color: #99ccff;
+}
+
+td {
+  font: 62.5% Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
+  text-align: left;
+  border: 1px solid #000000;
+  font-size: 12px;
+  vertical-align: baseline;
+}
+
+/* Specific stuff for column formatting */
+/* Move the submit buttons to the right */
+td.button {
+  text-align: right;
+}
+
+/* align the delete 'x' column centered */
+td.delete {
+  text-align: center;
+}
+
+/* color the active convention in green*/
+td.active {
+  background-color: #bced91;
+}
+
+/* darken events that are no longer available due to time */
+td.inactive {
+  background-color: #424242;
+}
+
+
+/* General tag type stuff */
+
+/* no border around images */
+img {
+  border: 0px;
+}
+
+p,li { 
+  text-align: left;
+}
+
+a {
+  text-decoration: underline;
+  color: #000000;
+}
+
+a:hover {
+  text-decoration: none;
+  background-color: #fa8072;
+  color: #000000;
+}
+
+h1 { 
+  font: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  color:#222;
+  letter-spacing: -1px;
+  padding: 0 0 0 0;
+  margin: 0;
+}
+
+h2 {
+  font: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color:#222;
+  padding: 0 0 3px 0;
+  margin-bottom: 0;
+}
+
+h3 {
+  font: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 0 0 0;
+  color: #222;
+  margin-bottom: 0;
+}
+
+h4 {
+  font: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 0 0 3px 0;
+  color: #08c;
+  margin-bottom: 0;
+}
+
+
+/* the main page wrapper stuff */
+/* Two column page */
+
+#contentwrapper{
+  float: left;
+  width: 100%;
+}
+
+#contentcolumn{
+  margin-right: 280px;
+}
+
+#rightcolumn{
+  float: left;
+  width: 260px;
+  margin-left: -260px;
+  background: #fff;
+}
+
+.innertube{
+  margin-top: 0;
+}
+
+/* from: http://cssmenumaker.com/blog/tutorials/css3-drop-down-menu-tutorial */
+
+.menu{
+  border:none;
+  border:0px;
+  margin:0px;
+  padding:0px;
+  font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+  font-size:12px;
+  font-weight:normal;
+}
+
+.menu ul{
+  background:#F93;
+  height:25px;
+  list-style:none;
+  margin:0;
+  padding:0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0px 6px 0px 0px rgba(255, 255, 255, .1);
+  -moz-box-shadow: inset 0px 6px 0px 0px rgba(255, 255, 255, .1);
+  box-shadow: inset 0px 6px 0px 0px rgba(255, 255, 255, .1);
+  box-shadow: 3px 3px 3px #000;
+  -moz-box-shadow: 3px 3px 3px #000;
+  -webkit-box-shadow: 3px 3px 3px #000;
+}
+
+.menu li{
+  float:left;
+  padding:3px 0px 0px 15px; 
+}
+
+.menu li a{
+  color:#000;
+  display:block;
+  font-weight:normal;
+  line-height:25px;
+  margin:-3px;
+  padding:0px 8px;
+  text-align:center;
+  text-decoration:none;
+}
+
+.menu li a:hover{
+  background:#C60;
+  color:#FFFFFF;
+  text-decoration:none;
+  -webkit-box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+  -moz-box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+  box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+}
+
+.menu ul li:hover a{
+  background:#C60;
+  color:#FFFFFF;
+  text-decoration:none;
+}
+
+.menu li ul{
+  display:none;
+  height:auto;
+  padding:5px;
+  margin:0px;
+  border:0px;
+  position:absolute;
+  width:200px;
+  z-index:200;
+}
+
+.menu li:hover ul{
+  display:block; 
+}
+
+.menu li li {
+  display:block;
+  float:none;
+  margin:0px;
+  padding:0px;
+  width:200px;
+  background:#F93;
+/*this is where the rounded corners for the dropdown disappears*/
+}
+
+.menu li:hover li a{
+  background:none;
+}
+
+.menu li ul a{
+  display:block;
+  height:25px;
+  font-size:12px;
+  font-style:normal;
+  margin:0px;
+  padding:0px 5px 0px 5px;
+  text-align:left;
+}
+
+.menu li ul a:hover, .menu li ul li:hover a{
+  border:0px;
+  color:#ffffff;
+  text-decoration:none;
+  background:#C60;
+  -webkit-box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+  -moz-box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3);
+  box-shadow: inset 0px 0px 7px 2px rgba(0, 0, 0, .3); 
+}
+
