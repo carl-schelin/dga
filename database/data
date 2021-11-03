@@ -1,3 +1,8 @@
+CREATE USER 'dga'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON dga.* TO 'dga'@'localhost';
+FLUSH PRIVILEGES;
+
+
 insert into levels set lvl_id = null,lvl_name = 'Developer',   lvl_level = 1, lvl_disabled = 0;
 insert into levels set lvl_id = null,lvl_name = 'Site Owner',  lvl_level = 2, lvl_disabled = 0;
 insert into levels set lvl_id = null,lvl_name = 'Coordinator', lvl_level = 3, lvl_disabled = 0;
