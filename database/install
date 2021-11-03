@@ -1,0 +1,267 @@
+
+create table categories (
+ cat_id int(8) NOT NULL auto_increment,
+ cat_conid int(8) NOT NULL default 0,
+ cat_base int(10) NOT NULL default 0,
+ cat_title varchar(255) NOT NULL default "",
+ cat_menu varchar(20) NOT NULL default "",
+ cat_cost decimal(10,2) NOT NULL default 0.00,
+ cat_group int(8) NOT NULL default 0,
+ cat_color varchar(15) NOT NULL default "",
+ cat_email varchar(255) NOT NULL default "",
+ cat_summary text NOT NULL,
+ cat_text text NOT NULL,
+ cat_status int(8) NOT NULL default 0,
+primary key (cat_id)
+);
+
+
+create table condays (
+ day_id int(8) NOT NULL auto_increment,
+ day_conid int(8) NOT NULL default 0,
+ day_start int(10) NOT NULL default 0,
+ day_end int(10) NOT NULL default 0,
+ day_tstart int(10) NOT NULL default 0,
+ day_tend int(10) NOT NULL default 0,
+ day_status int(8) NOT NULL default 0,
+primary key (day_id)
+);
+
+
+create table contacts (
+ con_id int(8) NOT NULL auto_increment,
+ con_conid int(8) NOT NULL default 0,
+ con_text text NOT NULL,
+ con_status int(8) NOT NULL default 0,
+primary key (con_id)
+);
+
+
+create table convention (
+ con_id int(8) NOT NULL auto_increment,
+ con_title varchar(255) NOT NULL default '',
+ con_booklet int(8) NOT NULL default 0,
+ con_admin int(8) NOT NULL default 0,
+ con_start int(10) NOT NULL default 0,
+ con_end int(10) NOT NULL default 0,
+ con_pstart int(10) NOT NULL default 0,
+ con_pend int(10) NOT NULL default 0,
+ con_limage int(8) NOT NULL default 0,
+ con_rimage int(8) NOT NULL default 0,
+ con_active int(1) NOT NULL default 0,
+ con_status int(8) NOT NULL default 0,
+primary key (con_id)
+);
+
+
+create table events (
+ evt_id int(8) NOT NULL auto_increment,
+ evt_conid int(8) NOT NULL default 0,
+ evt_type int(8) NOT NULL default 0,
+ evt_cost decimal(10,2) NOT NULL default 0.00,
+ evt_category varchar(20) NOT NULL default '',
+ evt_subcat int(10) NOT NULL default 1,
+ evt_title varchar(255) NOT NULL default '',
+ evt_subtitle varchar(255) NOT NULL default '',
+ evt_host int(8) NOT NULL default 0,
+ evt_text text NOT NULL,
+ evt_note varchar(255) NOT NULL default '',
+ evt_start int(10) NOT NULL default 0,
+ evt_end int(10) NOT NULL default 0,
+ evt_location int(8) NOT NULL default 0,
+ evt_limit int(8) NOT NULL default 0,
+ evt_timestamp timestamp NOT NULL default "0000-00-00 00:00:00",
+ evt_complete int(8) NOT NULL default 0,
+ evt_status int(8) NOT NULL default 0,
+primary key (evt_id)
+);
+
+
+create table fees (
+ fee_id int(8) NOT NULL auto_increment,
+ fee_conid int(8) NOT NULL default 0,
+ fee_text text NOT NULL,
+ fee_status int(8) NOT NULL default 0,
+primary key (fee_id)
+);
+
+create table groups (
+ grp_id int(8) NOT NULL auto_increment,
+ grp_conid int(8) NOT NULL default 0,
+ grp_name varchar(30) NOT NULL default '',
+ grp_status int(8) NOT NULL default 0,
+primary key (grp_id)
+);
+
+
+create table guests (
+ gst_id int(8) NOT NULL auto_increment,
+ gst_conid int(8) NOT NULL default 0,
+ gst_title varchar(255) NOT NULL default '',
+ gst_name varchar(255) NOT NULL default '',
+ gst_order int(8) NOT NULL default 0,
+ gst_image int(8) NOT NULL default 0,
+ gst_location int(8) NOT NULL default 0,
+ gst_start int(10) NOT NULL default 0,
+ gst_end int(10) NOT NULL default 0,
+ gst_text text NOT NULL,
+ gst_status int(8) NOT NULL default 0,
+primary key (gst_id)
+);
+
+
+create table images (
+ img_id int(8) NOT NULL auto_increment,
+ img_title varchar(255) NOT NULL default '',
+ img_file varchar(255) NOT NULL default '',
+ img_status int(8) NOT NULL default 0,
+primary key (img_id)
+);
+
+
+create table levels (
+ lvl_id int(8) NOT NULL auto_increment,
+ lvl_name varchar(255) NOT NULL default '',
+ lvl_level int(1) NOT NULL default 0,
+ lvl_disabled tinyint(1) NOT NULL default 0,
+primary key (lvl_id)
+);
+
+
+create table locations (
+ loc_id int(8) NOT NULL auto_increment,
+ loc_conid int(8) NOT NULL default 0,
+ loc_title varchar(100) NOT NULL default '',
+ loc_subloc varchar(100) NOT NULL default '',
+ loc_limit int(8) NOT NULL default 0,
+ loc_status int(8) NOT NULL default 0,
+primary key (loc_id)
+);
+
+
+create table log (
+ log_id int(10) NOT NULL auto_increment,
+ log_user varchar(30) NOT NULL default '',
+ log_date timestamp NOT NULL default CURRENT_TIMESTAMP,
+ log_source varchar(30) NOT NULL default '',
+ log_detail varchar(255) NOT NULL default '',
+primary key (log_id)
+);
+
+
+create table mailing (
+ mail_id int(8) NOT NULL auto_increment,
+ mail_name varchar(255) NOT NULL default '',
+ mail_address varchar(255) NOT NULL default '',
+ mail_ip varchar(255) NOT NULL default '',
+ mail_status int(8) NOT NULL default 0,
+primary key (mail_id)
+);
+
+
+create table news (
+ news_id int(8) NOT NULL auto_increment,
+ news_conid int(8) NOT NULL default 0,
+ news_title varchar(255) NOT NULL default '',
+ news_start int(10) NOT NULL default 0,
+ news_end int(10) NOT NULL default 0,
+ news_text text NOT NULL,
+ news_status int(8) NOT NULL default 0,
+primary key (news_id)
+);
+
+
+create table rate_events (
+ rate_id int(8) NOT NULL auto_increment,
+ rate_conid int(8) NOT NULL default 0,
+ rate_user int(8) NOT NULL default 0,
+ rate_event int(8) NOT NULL default 0,
+ rate_rating int(4) NOT NULL default 0,
+ rate_text text NOT NULL,
+ rate_status int(1) NOT NULL default 0,
+ rate_timestamp timestamp NOT NULL default CURRENT_TIMESTAMP,
+ rate_anonymous int(1) NOT NULL default 0,
+primary key (rat_id)
+);
+
+
+create table rate_judges (
+ rate_id int(8) NOT NULL auto_increment,
+ rate_conid int(8) NOT NULL default 0,
+ rate_user int(8) NOT NULL default 0,
+ rate_judge int(8) NOT NULL default 0,
+ rate_rating int(4) NOT NULL default 0,
+ rate_text text NOT NULL,
+ rate_status int(1) NOT NULL default 0,
+ rate_timestamp timestamp NOT NULL default CURRENT_TIMESTAMP,
+primary key (rate_id)
+);
+
+
+create table rules (
+ rul_id int(8) NOT NULL auto_increment,
+ rul_conid int(8) NOT NULL default 0,
+ rul_text text NOT NULL,
+ rul_status int(1) NOT NULL default 0,
+primary key (rul_id)
+);
+
+create table signup (
+ sup_id int(10) NOT NULL auto_increment,
+ sup_conid int(8) NOT NULL default 0,
+ sup_event int(8) NOT NULL default 0,
+ sup_user int(8) NOT NULL default 0,
+ sup_status int(1) NOT NULL default 0,
+ sup_paid int(1) NOT NULL default 0,
+ sup_delete int(1) NOT NULL default 0,
+primary key (sup_id)
+);
+
+create table staff (
+ sta_id int(8) NOT NULL auto_increment,
+ sta_conid int(8) NOT NULL default 0,
+ sta_title int(8) NOT NULL default 0,
+ sta_user int(8) NOT NULL default 0,
+ sta_status int(8) NOT NULL default 0,
+primary key (sta_id)
+);
+
+create table themes (
+ theme_id int(10) NOT NULL auto_increment,
+ theme_name char(40) NOT NULL default '',
+ theme_title char(40) NOT NULL default '',
+ theme_disabled int(10) NOT NULL default 0,
+primary key (theme_id)
+);
+
+create table users (
+ usr_id int(8) NOT NULL auto_increment,
+ usr_level int(1) NOT NULL default 4,
+ usr_disabled int(1) NOT NULL default 0,
+ usr_reset int(1) NOT NULL default 0,
+ usr_name varchar(30) NOT NULL default '',
+ usr_first varchar(255) NOT NULL default '',
+ usr_middle varchar(255) NOT NULL default '',
+ usr_last varchar(255) NOT NULL default '',
+ usr_suffix varchar(30) NOT NULL default '',
+ usr_email varchar(255) NOT NULL default '',
+ usr_address1 varchar(255) NOT NULL default '',
+ usr_address2 varchar(255) NOT NULL default '',
+ usr_city varchar(255) NOT NULL default '',
+ usr_region varchar(255) NOT NULL default '',
+ usr_country varchar(255) NOT NULL default '',
+ usr_postal varchar(30) NOT NULL default 0,
+ usr_phone varchar(50) NOT NULL default '',
+ usr_website varchar(255) NOT NULL default '',
+ usr_dateofbirth int(10) NOT NULL default 0,
+ usr_passwd varchar(255) NOT NULL default '',
+ usr_timestamp timestamp NOT NULL default CURRENT_TIMESTAMP,
+ usr_lastlogin timestamp NOT NULL default "0000-00-00 00:00:00",
+ usr_group int(1) NOT NULL default 0,
+ usr_maillist int(1) NOT NULL default 0,
+ usr_checkin timestamp NOT NULL default "0000-00-00 00:00:00",
+ usr_ipaddr char(20) NOT NULL default "0.0.0.0",
+ usr_theme int(10) NOT NULL default 7,
+primary key (usr_id)
+);
+
