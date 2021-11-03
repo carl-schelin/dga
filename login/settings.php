@@ -11,13 +11,13 @@ date_default_timezone_set('America/Denver');
 # Set the environment here so other places in the code can be tested without changing code.
 $hostname = php_uname('n');
 
-if ($hostname == "guardian.schelin.org") {
+if ($hostname == "[hostname]") {
   $Siteenv              = "PROD";
   $Sitedebug            = "YES";
   $Sitedebug            = "NO";
 
 # Set site specific variables
-  $Sitehttp             = "dga.shadowrun.us";
+  $Sitehttp             = "[hosturl]";
   $Siteurl              = "http://" . $Sitehttp;
 
 # Header graphic
@@ -28,46 +28,16 @@ if ($hostname == "guardian.schelin.org") {
   $Siteinstall          = "/";
 
 # Who to contact
-  $Siteadmins           = ",carl@schelin.org";
-  $Sitedev              = "carl@schelin.org";
-  $EmergencyContact	= "carl@schelin.org";
+  $Siteadmins           = ",[adminemail]";
+  $Sitedev              = "[devemail]";
+  $EmergencyContact	= "[contactemail]";
 
 # MySQL specific settings
   $DBtype		= "mysql";
   $DBserver		= "localhost";
   $DBname		= "dga";
   $DBuser		= "dga";
-  $DBpassword		= "sp@nGw1p";
-  $DBprefix             = "";
-}
-
-if ($hostname == "lnmt1cuomdev1.internal.pri") {
-  $Siteenv              = "DEV";
-  $Sitedebug            = "NO";
-  $Sitedebug            = "YES";
-
-# Set site specific variables
-  $Sitehttp             = "lnmt1cuomdev1.internal.pri";
-  $Siteurl              = "http://" . $Sitehttp;
-
-# Header graphic
-  $Siteheader		= "dgaheader.png";
-
-# Path details
-  $Sitedir              = "/var/www/html";
-  $Siteinstall          = "/dga";
-
-# Who to contact
-  $Siteadmins           = ",carl@schelin.org";
-  $Sitedev              = "carl@schelin.org";
-  $EmergencyContact     = "carl@schelin.org";
-
-# MySQL specific settings
-  $DBtype		= "mysql";
-  $DBserver		= "localhost";
-  $DBname		= "dga";
-  $DBuser		= "dga";
-  $DBpassword		= "sp@nGw1p";
+  $DBpassword		= "[dbpassword]";
   $DBprefix             = "";
 }
 
@@ -115,10 +85,12 @@ $Loginpath              = $Sitepath . "/login";
 $Loginroot              = $Siteroot . "/login";
 
 # Access levels
-$AL_Admin               = 1;
-$AL_Edit                = 2;
-$AL_ReadOnly            = 3;
-$AL_Guest               = 4;
+$AL_DEV                 = 1;
+$AL_Owner               = 2;
+$AL_Coordinator         = 3;
+$AL_Judge               = 4;
+$AL_Gamer               = 5;
+$AL_Guest               = 6;
 
 # Set a default theme for users not logged in.
 if (!isset($_SESSION['theme'])) {
